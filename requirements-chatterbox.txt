@@ -1,0 +1,2 @@
+# Chatterbox TTS provides the `chatterbox.tts` package used by chatterbox_worker.py.
+chatterbox-tts

@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.venv/
+outputs/
+data/wham_noise/
+data/reference_audio/
+data/transcripts.tsv
+pretrained_models/
+*.wav
+*.flac
+*.mp3
+*.pt
+*.pth
+*.safetensors

@@ -1,0 +1,4 @@
+# Install the upstream CosyVoice requirements first; this file contains the
+# additional packages imported directly by cosyvoice_worker.py.
+huggingface-hub
+torchaudio

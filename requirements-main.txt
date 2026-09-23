@@ -1,0 +1,11 @@
+numpy<2
+pandas
+scipy
+soundfile
+torch
+librosa
+ffmpeg-python
+pedalboard
+pystoi
+pesq
+utmos

@@ -1,0 +1,24 @@
+{
+  "data_number": 1,
+  "maximum_attack": 0,
+  "generated_speaker_number": 1,
+  "speaker_identity_seed": 1234,
+  "generation_split_proportions": {
+    "train": 0.7,
+    "validation": 0.1,
+    "test": 0.2
+  },
+  "generation_method_proportions": {
+    "generated": 0.0,
+    "clone": 1.0
+  },
+  "config_folder_path": "models",
+  "audio_output_folder": "../outputs",
+  "generation_log_path": "../outputs/generation.json",
+  "speaker_identity_file": "../outputs/speaker_identity.json",
+  "libritts_speaker_file": "../outputs/libritts_speakers.json",
+  "identity_manifest_file": "../outputs/identity_manifest.json",
+  "instruct_path": "../instruct.json",
+  "description_path": "../description.json",
+  "cafe_audio_path": "../data/wham_noise"
+}

@@ -1,0 +1,116 @@
+{
+  "speaker_profile": {
+    "gender": [
+      "male",
+      "female"
+    ],
+    "age": [
+      "child",
+      "teenager",
+      "adult",
+      "elderly",
+      "young adult",
+      "middle-aged"
+    ],
+    "accent": [
+      "General American",
+      "Southern American",
+      "New York American",
+      "Canadian",
+      "RP British",
+      "London",
+      "Scottish",
+      "Irish",
+      "Australian",
+      "New Zealand",
+      "South African",
+      "Korean",
+      "Chinese",
+      "Japanese",
+      "Indian",
+      "Singaporean",
+      "Nigerian",
+      "Spanish",
+      "French",
+      "German",
+      "Russian",
+      "Brazilian Portuguese"
+    ]
+  },
+
+  "speaking_traits": {
+    "speaking_style": [
+      "professional",
+      "casual",
+      "conversational",
+      "authoritative",
+      "friendly",
+      "energetic",
+      "reserved",
+      "persuasive",
+      "academic"
+    ],
+    "emotion": [
+      "neutral",
+      "happy",
+      "sad",
+      "angry",
+      "fearful",
+      "surprised",
+      "calm",
+      "excited",
+      "frustrated",
+      "empathetic"
+    ],
+    "speaking_speed": [
+      "very slow",
+      "slow",
+      "moderate",
+      "fast",
+      "very fast"
+    ],
+    "speaking_type": [
+      "narration",
+      "conversation",
+      "presentation",
+      "news reading",
+      "storytelling",
+      "customer service",
+      "interview",
+      "announcement"
+    ],
+    "voice_quality": [
+      "clear",
+      "warm",
+      "breathy",
+      "raspy",
+      "deep",
+      "bright",
+      "soft",
+      "nasal",
+      "smooth"
+    ],
+    "intonation": [
+      "flat",
+      "natural",
+      "expressive",
+      "rising",
+      "falling",
+      "restrained",
+      "dramatic",
+      "uncertain"
+    ],
+    "articulation": [
+      "clear",
+      "precise",
+      "relaxed",
+      "crisp",
+      "soft",
+      "careful",
+      "casual",
+      "mumbled"
+    ]
+  },
+
+  "prompt_template": "A [gender] speaker who is a/an [age], speaking English with a [accent] accent. The speaker has a [voice_quality] voice and uses a [speaking_style] speaking style. They sound [emotion], speaking at a [speaking_speed] pace. The speech is delivered as [speaking_type], with [intonation] intonation, and [articulation] articulation."
+}

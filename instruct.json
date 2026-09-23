@@ -1,0 +1,66 @@
+{
+  "speaking_traits": {
+    "speaking_style": [
+      "professional",
+      "casual",
+      "conversational",
+      "authoritative",
+      "friendly",
+      "energetic",
+      "reserved",
+      "persuasive",
+      "academic"
+    ],
+    "emotion": [
+      "neutral",
+      "happy",
+      "sad",
+      "angry",
+      "fearful",
+      "surprised",
+      "calm",
+      "excited",
+      "frustrated",
+      "empathetic"
+    ],
+    "speaking_speed": [
+      "very slow",
+      "slow",
+      "moderate",
+      "fast",
+      "very fast"
+    ],
+    "speaking_type": [
+      "narration",
+      "conversation",
+      "presentation",
+      "news reading",
+      "storytelling",
+      "customer service",
+      "interview",
+      "announcement"
+    ],
+    "intonation": [
+      "flat",
+      "natural",
+      "expressive",
+      "rising",
+      "falling",
+      "restrained",
+      "dramatic",
+      "uncertain"
+    ],
+    "articulation": [
+      "clear",
+      "precise",
+      "relaxed",
+      "crisp",
+      "soft",
+      "careful",
+      "casual",
+      "mumbled"
+    ]
+  },
+
+  "prompt_template": "You are a helpful assistant. Speak in a [speaking_style] style. Your speech should convey a [emotion] emotion, at a [speaking_speed] pace. Use [intonation] intonation and [articulation] articulation. The speech is delivered as [speaking_type].<|endofprompt|>"
+}
