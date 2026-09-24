@@ -76,6 +76,68 @@ The example generates one clone sample and writes audio and metadata under
 `config/models/` for a real run. Use absolute paths in a production config when
 inputs live outside the repository.
 
+## Repository map
+
+This project is organized around a single generation pipeline and a few
+supporting assets. The main execution flow is driven by [main.py](main.py),
+which reads a JSON config, creates speaker identities, dispatches jobs to the
+TTS workers, applies randomized audio attacks, records metadata, and scores the
+resulting audio with detector models.
+
+### Core pipeline files
+
+- [main.py](main.py): main orchestration script for scheduling data generation,
+  dispatching TTS workers, applying attacks, and saving metadata.
+- [apply_attack.py](apply_attack.py): randomized audio attack pipeline used to
+  create adversarial or degraded variants of generated speech.
+- [quality_check.py](quality_check.py): STOI, PESQ, and UTMOS quality checks used
+  to reject low-quality attacked outputs.
+- [data_storing.py](data_storing.py): writes generation metadata and attack logs to
+  JSON files.
+- [speaker_identities.py](speaker_identities.py): builds prompt identities and
+  LibriTTS-R speaker pools used for generated and cloned voice jobs.
+- [evaluate_generated_audio.py](evaluate_generated_audio.py): loads detector models
+  and scores generated or attacked audio files.
+
+### Model workers
+
+- [qwen_worker.py](qwen_worker.py): Qwen TTS voice design and clone implementation.
+- [chatterbox_worker.py](chatterbox_worker.py): Chatterbox clone-only pipeline.
+- [cosyvoice_worker.py](cosyvoice_worker.py): CosyVoice clone-only pipeline using a
+  separate model checkout and model download step.
+
+### Config and prompt files
+
+- [pipeline.config](pipeline.config): production config used by the local pipeline.
+- [config/main.example.json](config/main.example.json): portable example config for
+  running from a public repository checkout.
+- [config/models/qwen.example.config](config/models/qwen.example.config): minimal
+  example model configuration for a Qwen job.
+- [description.json](description.json): generated-speaker description schema used to
+  build synthetic voice identity prompts.
+- [instruct.json](instruct.json): prompt instructions used by CosyVoice-style
+  generation tasks.
+
+### Generated data and logs
+
+- [generation_previous.json](generation_previous.json): previous generation run log
+  kept for comparison and auditing.
+- [generation_clean.json](generation_clean.json): cleaned generation log with
+  accepted or filtered entries.
+- [generation_trajectory.json](generation_trajectory.json): trajectory-level log for
+  attack progression and scoring across generated samples.
+- [speaker_identity.json](speaker_identity.json): generated speaker identity pool.
+- [identity_manifest.json](identity_manifest.json): combined manifest pairing
+  generated identities and LibriTTS-R speaker references.
+
+### Top-level utilities and evaluation scripts
+
+The repository also contains additional helper scripts for dataset expansion,
+trajectory processing, and evaluation, such as trajectory builders, sweeps,
+quality filtering, and attack-level analysis. Those are not required for the
+minimal runnable generation pipeline, but they are useful for the full research
+workflow behind the manuscript.
+
 ## GitHub
 
 Do not commit model weights, datasets, generated audio, or generated metadata.
