@@ -120,12 +120,9 @@ resulting audio with detector models.
 
 ### Generated data and logs
 
-- [generation_previous.json](generation_previous.json): previous generation run log
-  kept for comparison and auditing.
-- [generation_clean.json](generation_clean.json): cleaned generation log with
-  accepted or filtered entries.
-- [generation_trajectory.json](generation_trajectory.json): trajectory-level log for
-  attack progression and scoring across generated samples.
+- [generation_previous.json](generation_previous.json):  data log for attack progression and scoring across samples on the main 11,660 audio data.
+- [generation_clean.json](generation_clean.json): data log for attack progression and scoring across samples on order-permuted experiment for LibriTTS.
+- [generation_trajectory.json](generation_trajectory.json): data log for attack progression and scoring across samples on order-permuted experiment for LibriTTS-R, Qwen3TTS-1.7B-base, Chatterbox-V3, and FunCosyVoice3.
 - [speaker_identity.json](speaker_identity.json): generated speaker identity pool.
 - [identity_manifest.json](identity_manifest.json): combined manifest pairing
   generated identities and LibriTTS-R speaker references.
