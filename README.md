@@ -106,6 +106,9 @@ resulting audio with detector models.
 - [cosyvoice_worker.py](cosyvoice_worker.py): CosyVoice clone-only pipeline using a
   separate model checkout and model download step.
 
+### Testing Script
+- [flip_rate_analysis.py](flip_rate_analysis.py): Script to run the flip rate test shown on Table 1.
+
 ### Config and prompt files
 
 - [pipeline.config](pipeline.config): production config used by the local pipeline.
