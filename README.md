@@ -1,4 +1,4 @@
-# IEMOCAP Main Generation Pipeline
+# Iterative Transformation Main Generation Pipeline
 
 This repository contains the main audio-generation pipeline in `main.py`.
 Evaluation, trajectory, and sweep scripts are not required for the minimal run.
