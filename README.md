@@ -120,13 +120,13 @@ resulting audio with detector models.
 
 ### Generated data and logs
 
-- [generation_previous.json](generation_previous.json):  data log for attack progression and scoring across samples on the main 11,660 audio data.
-- [generation_clean.json](generation_clean.json): data log for attack progression and scoring across samples on order-permuted experiment for LibriTTS.
-- [generation_trajectory.json](generation_trajectory.json): data log for attack progression and scoring across samples on order-permuted experiment for LibriTTS-R, Qwen3TTS-1.7B-base, Chatterbox-V3, and FunCosyVoice3.
-- [speaker_identity.json](speaker_identity.json): generated speaker identity pool.
-- [identity_manifest.json](identity_manifest.json): combined manifest pairing
-  generated identities and LibriTTS-R speaker references.
-
+- [generation_previous.json](generation_previous.json):  Data log for attack progression and scoring across samples on the main 11,660 audio data.
+- [generation_clean.json](generation_clean.json): Data log for attack progression and scoring across samples on order-permuted experiment for LibriTTS.
+- [generation_trajectory.json](generation_trajectory.json): Data log for attack progression and scoring across samples on order-permuted experiment for LibriTTS-R, Qwen3TTS-1.7B-base, Chatterbox-V3, and FunCosyVoice3.
+- [speaker_identity.json](speaker_identity.json): Generated speaker identity pool.
+- [identity_manifest.json](identity_manifest.json): Combined manifest pairing generated identities and LibriTTS-R speaker references.
+- [checkpoint/aasist/best.pth](checkpoint/aasist/best.pth): The fine-tuned AASIST weight on our pipeline's generated data.
+  
 ### Top-level utilities and evaluation scripts
 
 The repository also contains additional helper scripts for dataset expansion,
